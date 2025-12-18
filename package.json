@@ -1,25 +1,23 @@
 {
-      "name": "birthday-dad-greeting",
-        "version": "1.0.0",
-          "description": "A beautiful and interactive happy birthday greeting for Dad.",
-            "main": "index.html",
-              "scripts": {
-                  "start": "live-server --open=/index.html --quiet",
-                      "dev": "live-server --open=/index.html"
-                        },
-                          "keywords": [
-                              "birthday",
-                                  "greeting",
-                                      "animation",
-                                          "fireworks",
-                                              "html",
-                                                  "css",
-                                                      "javascript"
-                                                        ],
-                                                          "author": "SAI and Lasya",
-                                                            "license": "MIT",
-                                                              "devDependencies": {
-                                                                  "live-server": "^1.2.2"
-                                                                    }
-                                                                    }
+  "name": "birthday-dad-greeting",
+  "version": "1.0.0",
+  "description": "A beautiful and interactive happy birthday greeting for Dad.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --open=/index.html --quiet"
+  },
+  "keywords": [
+    "birthday",
+    "greeting",
+    "animation",
+    "fireworks",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "SAI and Lasya",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
