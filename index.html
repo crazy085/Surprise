@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Dad!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- This canvas will render the advanced fireworks -->
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- Container for background decorations (flying balloons and stars) -->
+    <div id="background-decorations">
+        <!-- Free-flying balloons -->
+        <div class="balloon" style="--color: #FF69B4; --left: 8%; --delay: 0s;"><svg viewBox="0 0 100 150"><path fill="var(--color)" d="M50 0C22.4 0 0 22.4 0 50c0 27.6 22.4 50 50 50s50-22.4 50-50C100 22.4 77.6 0 50 0z"/><path fill="var(--color)" d="M50 100l-5 10h10z"/></svg></div>
+        <div class="balloon" style="--color: #87CEEB; --left: 25%; --delay: 3s;"><svg viewBox="0 0 100 150"><path fill="var(--color)" d="M50 0C22.4 0 0 22.4 0 50c0 27.6 22.4 50 50 50s50-22.4 50-50C100 22.4 77.6 0 50 0z"/><path fill="var(--color)" d="M50 100l-5 10h10z"/></svg></div>
+        <div class="balloon" style="--color: #98FB98; --left: 40%; --delay: 6s;"><svg viewBox="0 0 100 150"><path fill="var(--color)" d="M50 0C22.4 0 0 22.4 0 50c0 27.6 22.4 50 50 50s50-22.4 50-50C100 22.4 77.6 0 50 0z"/><path fill="var(--color)" d="M50 100l-5 10h10z"/></svg></div>
+        <div class="balloon" style="--color: #FFD700; --left: 60%; --delay: 1s;"><svg viewBox="0 0 100 150"><path fill="var(--color)" d="M50 0C22.4 0 0 22.4 0 50c0 27.6 22.4 50 50 50s50-22.4 50-50C100 22.4 77.6 0 50 0z"/><path fill="var(--color)" d="M50 100l-5 10h10z"/></svg></div>
+        <div class="balloon" style="--color: #DDA0DD; --left: 75%; --delay: 4s;"><svg viewBox="0 0 100 150"><path fill="var(--color)" d="M50 0C22.4 0 0 22.4 0 50c0 27.6 22.4 50 50 50s50-22.4 50-50C100 22.4 77.6 0 50 0z"/><path fill="var(--color)" d="M50 100l-5 10h10z"/></svg></div>
+        <div class="balloon" style="--color: #F0E68C; --left: 90%; --delay: 7s;"><svg viewBox="0 0 100 150"><path fill="var(--color)" d="M50 0C22.4 0 0 22.4 0 50c0 27.6 22.4 50 50 50s50-22.4 50-50C100 22.4 77.6 0 50 0z"/><path fill="var(--color)" d="M50 100l-5 10h10z"/></svg></div>
+        
+        <!-- Stars -->
+        <div class="star" style="--top: 15%; --left: 20%; --delay: 0s;"></div>
+        <div class="star" style="--top: 25%; --left: 85%; --delay: 1s;"></div>
+        <div class="star" style="--top: 60%; --left: 10%; --delay: 2.5s;"></div>
+        <div class="star" style="--top: 40%; --left: 70%; --delay: 3.5s;"></div>
+    </div>
+
+    <!-- Main content wrapper -->
+    <div class="main-content-wrapper">
+        <h1>Happy Birthday</h1>
+        <h2>Dad</h2>
+        
+        <!-- The cake container with the large, realistic SVG -->
+        <div id="cake-container">
+            <svg id="cake" width="350" height="350" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="pinkFrosting" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#ffb6c1;stop-opacity:1" /><stop offset="100%" style="stop-color:#ff69b4;stop-opacity:1" /></linearGradient>
+                    <linearGradient id="chocolateFrosting" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#7b3f00;stop-opacity:1" /><stop offset="100%" style="stop-color:#5d2f0b;stop-opacity:1" /></linearGradient>
+                </defs>
+                <ellipse cx="250" cy="450" rx="180" ry="25" fill="#e0e0e0"/><ellipse cx="250" cy="445" rx="170" ry="22" fill="#f5f5f5"/>
+                <path d="M100 420 L100 340 Q100 320 120 320 L380 320 Q400 320 400 340 L400 420 Z" fill="#8B4513" stroke="#654321" stroke-width="2"/><rect x="100" y="340" width="300" height="15" fill="url(#chocolateFrosting)"/>
+                <path d="M120 320 L120 260 Q120 240 140 240 L360 240 Q380 240 380 260 L380 320 Z" fill="#A0522D" stroke="#8B4513" stroke-width="2"/><rect x="120" y="260" width="260" height="12" fill="url(#pinkFrosting)"/>
+                <path d="M140 240 L140 180 Q140 160 160 160 L340 160 Q360 160 360 180 L360 240 Z" fill="#CD853F" stroke="#A0522D" stroke-width="2"/><ellipse cx="250" cy="180" rx="110" ry="15" fill="url(#pinkFrosting)"/>
+                <path d="M170 180 Q165 200 170 210" fill="url(#chocolateFrosting)" stroke="url(#chocolateFrosting)" stroke-width="10" stroke-linecap="round"/>
+                <path d="M250 180 Q255 195 250 205" fill="url(#chocolateFrosting)" stroke="url(#chocolateFrosting)" stroke-width="10" stroke-linecap="round"/>
+                <path d="M330 180 Q325 200 330 215" fill="url(#chocolateFrosting)" stroke="url(#chocolateFrosting)" stroke-width="10" stroke-linecap="round"/>
+                <rect x="180" y="175" width="20" height="3" fill="#FFD700" transform="rotate(25 190 176.5)"/><rect x="220" y="178" width="20" height="3" fill="#87CEEB" transform="rotate(-15 230 179.5)"/><rect x="260" y="176" width="20" height="3" fill="#98FB98" transform="rotate(40 270 177.5)"/><rect x="300" y="179" width="20" height="3" fill="#DDA0DD" transform="rotate(-30 310 180.5)"/>
+                <rect x="190" y="120" width="15" height="50" fill="#FF69B4" rx="2"/><rect x="220" y="115" width="15" height="55" fill="#87CEEB" rx="2"/><rect x="250" y="110" width="15" height="60" fill="#98FB98" rx="2"/><rect x="280" y="115" width="15" height="55" fill="#FFD700" rx="2"/><rect x="310" y="120" width="15" height="50" fill="#DDA0DD" rx="2"/>
+                <g class="flame"><ellipse cx="197.5" cy="105" rx="8" ry="12" fill="#FFD700"><animate attributeName="ry" values="12;14;12" dur="0.5s" repeatCount="indefinite"/><animate attributeName="rx" values="8;6;8" dur="0.5s" repeatCount="indefinite"/></ellipse><ellipse cx="197.5" cy="110" rx="4" ry="6" fill="#FFA500"><animate attributeName="ry" values="6;7;6" dur="0.4s" repeatCount="indefinite"/></ellipse></g><g class="flame"><ellipse cx="227.5" cy="100" rx="8" ry="12" fill="#FFD700"><animate attributeName="ry" values="12;14;12" dur="0.6s" repeatCount="indefinite"/><animate attributeName="rx" values="8;6;8" dur="0.6s" repeatCount="indefinite"/></ellipse><ellipse cx="227.5" cy="105" rx="4" ry="6" fill="#FFA500"><animate attributeName="ry" values="6;7;6" dur="0.5s" repeatCount="indefinite"/></ellipse></g><g class="flame"><ellipse cx="257.5" cy="95" rx="8" ry="12" fill="#FFD700"><animate attributeName="ry" values="12;14;12" dur="0.55s" repeatCount="indefinite"/><animate attributeName="rx" values="8;6;8" dur="0.55s" repeatCount="indefinite"/></ellipse><ellipse cx="257.5" cy="100" rx="4" ry="6" fill="#FFA500"><animate attributeName="ry" values="6;7;6" dur="0.45s" repeatCount="indefinite"/></ellipse></g><g class="flame"><ellipse cx="287.5" cy="100" rx="8" ry="12" fill="#FFD700"><animate attributeName="ry" values="12;14;12" dur="0.5s" repeatCount="indefinite"/><animate attributeName="rx" values="8;6;8" dur="0.5s" repeatCount="indefinite"/></ellipse><ellipse cx="287.5" cy="105" rx="4" ry="6" fill="#FFA500"><animate attributeName="ry" values="6;7;6" dur="0.4s" repeatCount="indefinite"/></ellipse></g><g class="flame"><ellipse cx="317.5" cy="105" rx="8" ry="12" fill="#FFD700"><animate attributeName="ry" values="12;14;12" dur="0.6s" repeatCount="indefinite"/><animate attributeName="rx" values="8;6;8" dur="0.6s" repeatCount="indefinite"/></ellipse><ellipse cx="317.5" cy="110" rx="4" ry="6" fill="#FFA500"><animate attributeName="ry" values="6;7;6" dur="0.5s" repeatCount="indefinite"/></ellipse></g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- NEW: Signature text -->
+    <p class="signature">by SAI and Lasya</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
